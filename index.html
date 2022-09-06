@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lautaro González Trejo</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome Icons -->
+    <script
+      src="https://kit.fontawesome.com/2a2e74e139.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Jquery -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="./main.js"></script>
+  </head>
+  <body>
+    <nav>
+      <ul id="menu-box">
+        <li id="nav-name">
+          <p>Lautaro</p>
+          <p>González</p>
+          <p>Trejo</p>
+        </li>
+        <li id="job-desc">
+          <p class="lang-es">Desarrollador Web</p>
+          <p class="lang-en">Web Developer</p>
+        </li>
+        <li>
+          <a class="menu-item" href="#about"
+            ><span class="lang-es">Sobre Mí</span
+            ><span class="lang-en">About Me</span></a
+          >
+        </li>
+        <li>
+          <a class="menu-item" href="#projects">
+            <span class="lang-es">Proyectos</span
+            ><span class="lang-en">Projects</span></a
+          >
+        </li>
+        <li>
+          <a class="menu-item" href="#contact">
+            <span class="lang-es">Contacto</span
+            ><span class="lang-en">Contact</span></a
+          >
+        </li>
+        <ul id="social">
+          <li>
+            <a
+              href="https://linkedin.com/in/LautaroGTrejo"
+              class="menu-item"
+              target="_blank"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/Levtraru"
+              class="menu-item"
+              target="_blank"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+          </li>
+        </ul>
+        <li>
+          <button id="switch-lang">
+            <i class="fa-solid fa-language fa-lg"></i>
+          </button>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <!-- ====== HERO ====== -->
+      <section id="hero">
+        <div id="hero-container">
+          <!-- Picture -->
+          <img src="./src/pp.jpg" alt="Profile picture" id="profile-pic" />
+
+          <!-- Name -->
+          <h1 class="name name1">
+            <span class="name-l">Lautaro</span><br /><span class="name-s"
+              >González Trejo</span
+            >
+          </h1>
+
+          <!-- Title -->
+          <div class="name name2">
+            <span class="lang-es">Desarrollador</span
+            ><span class="lang-en name-s">Web</span><br /><span
+              class="lang-es name-s"
+              >Web </span
+            ><span class="lang-en">Developer</span>
+          </div>
+        </div>
+      </section>
+      <div class="empty"></div>
+
+      <!-- ========== ABOUT ME ========== -->
+      <section id="about">
+        <div class="h2-top-margin"></div>
+        <h2>
+          <span class="lang-es">Sobre Mí</span>
+          <span class="lang-en">About Me</span>
+        </h2>
+        <div class="about-container">
+          <!-- Tools -->
+          <h3 class="lang-es">Mis Herramientas</h3>
+          <h3 class="lang-en">My Tools</h3>
+          <div class="tools-container">
+            <img src="./src/logos/c.svg" alt="C logo" />
+            <img src="./src/logos/html5.svg" alt="HTML5 logo" />
+            <img src="./src/logos/css3.svg" alt="CSS logo" />
+            <img src="./src/logos/bootstrap.svg" alt="Bootstrap logo" />
+            <img src="./src/logos/python.svg" alt="Python logo" />
+            <img src="./src/logos/javascript.svg" alt="JavaScript logo" />
+            <img src="./src/logos/typescript.svg" alt="TypeScript logo" />
+            <img src="./src/logos/react.svg" alt="React logo" />
+            <img src="./src/logos/styled.svg" alt="Styled logo" />
+            <img src="./src/logos/angularjs.svg" alt="Angular logo" />
+            <img src="./src/logos/node-js.svg" alt="Node.js logo" />
+            <img src="./src/logos/github.png" alt="Github logo" />
+            <img src="./src/logos/mongodb.svg" alt="MongoDB logo" />
+            <img src="./src/logos/netlify.svg" alt="Netlify logo" />
+          </div>
+
+          <!-- Training -->
+          <h3>
+            <span class="lang-es">Mi Formación</span>
+            <span class="lang-en">My Training</span>
+          </h3>
+          <div class="training-container">
+            <button class="training-title" onclick="openTab('Python')">
+              Full Stack Python
+            </button>
+            <button class="training-title" onclick="openTab('CS50')">
+              CS50's Intro to CS
+            </button>
+            <button class="training-title" onclick="openTab('Auto')">
+              Autodidacta
+            </button>
+            <button class="training-title" onclick="openTab('Teacher')">
+              Profesor de Inglés
+            </button>
+            <div id="Python" class="training-desc" onclick="gridTab('Python')">
+              <ul>
+                <li>
+                  <span class="lang-es">Agosto 2022 - Presente</span
+                  ><span class="lang-en">August 2022 - Ongoing</span>
+                </li>
+                <li>
+                  <span class="lang-es">Curso Online</span
+                  ><span class="lang-en">Online Course</span>
+                </li>
+                <li>Codo a Codo 4.0 - Ciudad de Buenos Aires</li>
+                <li>
+                  HTML – CSS – Bootstrap – JS – VUE – GIT – Scrum – MySQL – Python –
+                  CRUD – Django
+                </li>
+              </ul>
+            </div>
+            <div id="CS50" class="training-desc" onclick="gridTab('CS50')">
+              <ul>
+                <li>
+                  <span class="lang-es">Julio 2022 - Presente</span
+                  ><span class="lang-en">July 2022 - Ongoing</span>
+                </li>
+                <li>
+                  <span class="lang-es">Curso Online</span
+                  ><span class="lang-en">Online Course</span>
+                </li>
+                <li>HarvardX CS50x</li>
+              </ul>
+            </div>
+            <div id="Auto" class="training-desc" onclick="gridTab('Auto')">
+              <ul>
+                <li>
+                  <span class="lang-es">Marzo 2022 - Presente</span
+                  ><span class="lang-en">March 2022 - Ongoing</span>
+                </li>
+                <li>HTML – CSS – JavaScript – ReactJS – AngularJS – Node.js</li>
+              </ul>
+            </div>
+            <div
+              id="Teacher"
+              class="training-desc"
+              onclick="gridTab('Teacher')"
+            >
+              <ul>
+                <li>2015 - 2021</li>
+                <li>
+                  <span class="lang-es">Título Terciario</span
+                  ><span class="lang-en">College Degree</span>
+                </li>
+                <li>Instituto Superior de Formación Docente Nº21</li>
+                <li>
+                  <span class="lang-es">
+                    Inglés avanzado – Creación de planes – Liderazgo – Comunicación
+                  </span>
+                  <span class="lang-en">
+                    Advanced English – Plan creation – Leadership – Communication
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="h2-margin"></div>
+      </section>
+
+      <!-- ========== PROJECTS ========== -->
+      <section id="projects">
+        <h2>
+          <span class="lang-es">Mis Proyectos</span>
+          <span class="lang-en">My Projects</span>
+        </h2>
+        <div id="projects-container">
+          <!-- Project: Tomoyo no Showroom -->
+          <a
+            href="https://marvelous-florentine-637533.netlify.app/"
+            target="_blank"
+            class="project-link"
+            ><figure>
+              <img
+                src="./src/project-tomoyo.png"
+                alt="Project: Tomoyo no Showroom"
+                class="project-img"
+              />
+              <div class="img-hover-text">
+                <span class="lang-es"
+                  >Comercio electrónico ficticio completo.</span
+                >
+                <span class="lang-en">Complete fake e-commerce</span
+                ><br /><br />
+                <b>Tools used:</b><br />
+                ReactJS<br />
+                Styled Components
+              </div>
+              <figcaption>React E-Commerce</figcaption>
+            </figure></a
+          >
+
+          <!-- Project: Skul Landing Page -->
+          <a
+            href="https://chipper-clafoutis-5802ea.netlify.app/"
+            target="_blank"
+            class="project-link"
+            ><figure>
+              <img
+                src="./src/project-skul.png"
+                alt="Project: Game Landing Page"
+                class="project-img"
+              />
+              <div class="img-hover-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed,
+                deserunt!
+              </div>
+              <figcaption>
+                <span class="lang-es"
+                  >Pagina de Inicio de Videojuego Estática</span
+                ><span class="lang-en">Videogame Landing Page</span>
+              </figcaption>
+            </figure></a
+          >
+
+          <!-- Project: React App -->
+          <a
+            href="https://wondrous-speculoos-2a434d.netlify.app/"
+            target="_blank"
+            class="project-link"
+            ><figure>
+              <img
+                src="./src/project-react.png"
+                alt="Project: React"
+                class="project-img"
+              />
+              <div class="img-hover-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed,
+                deserunt!
+              </div>
+              <figcaption>
+                <span class="lang-es">Primeras 4 Aplicaciones con React</span
+                ><span class="lang-en">First 4 React Apps</span>
+              </figcaption>
+            </figure></a
+          >
+        </div>
+        <div class="h2-margin"></div>
+      </section>
+
+      <!-- ========== CONTACT ========== -->
+      <section id="contact">
+        <h2>
+          <span class="lang-es">Estemos en Contacto</span
+          ><span class="lang-en">Let's Get in Touch</span>
+        </h2>
+        <div id="contact-container">
+          <p id="contact-text">
+            <span class="lang-es"
+              >Estoy muy entusiasmado por comenzar mi carrera profesional como
+              desarrollador. ¡Hagámoslo juntos!</span
+            ><span class="lang-en"
+              >I'm really excited and looking forward to start my professional
+              career as a developer. Let's do it together!</span
+            ><br /><br /><br />
+            <a
+              href="mailto:lautarogtrejo@gmail.com"
+              target="_blank"
+              class="mail-icon"
+            >
+              <i class="fa-solid fa-envelope-open" id="mail-open"></i>
+              <i class="fa-solid fa-envelope-open-text" id="mail-sending"></i>
+              <i class="fa-solid fa-envelope" id="mail-closed"></i> </a
+            ><br /><br />
+          </p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
