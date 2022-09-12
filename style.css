@@ -14,6 +14,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow: hidden;
 }
 
 body {
@@ -21,14 +22,12 @@ body {
   background: url("./src/background.png");
   scroll-behavior: smooth;
 }
-main {
-  margin-left: 150px;
-}
-section{
+section {
   background: url("./src/background.png");
 }
 a {
   text-decoration: none;
+  color: var(--white);
 }
 h2 {
   color: var(--black);
@@ -37,54 +36,79 @@ h2 {
   letter-spacing: 1rem;
   text-align: center;
   background-color: var(--accent);
+  padding-top: 2rem;
   margin: 0 0 0.5em 0;
 }
-h3{
+h3 {
   color: var(--black);
   font-weight: 800;
   font-size: 1.5em;
   background-color: var(--orange);
   margin: 0 auto;
-  padding: .5em 0;
+  padding: 0.5em 0;
   text-align: center;
   width: 20%;
 }
-.empty{
+.empty {
   height: 667px;
 }
-.h2-margin{
+.h2-margin {
   height: 2em;
 }
-li{
+li {
   list-style: none;
 }
 
-
 /* ========== NAVBAR ========== */
-#menu-box {
-  display: block;
+#nav-container {
+  display: grid;
+  grid-template-columns: 1fr 3fr 2fr;
   position: fixed;
   top: 0;
   left: 0;
-  width: 150px;
-  height: 100%;
-  margin: 0;
-  padding: 20px 0;
-  list-style: none;
+  width: 100vw;
+  height: 2rem;
   background-color: var(--black);
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
   z-index: 2;
 }
+#nav-navigation, #nav-title {
+  padding: 0 .5em;
+  display: inline-flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#nav-navigation {
+  grid-column: 3 / 3;
+}
+#nav-navigation li a{
+  transition: all .5s ease-in-out;
+}
+
+#nav-navigation li a:hover {
+  color: var(--accent);
+  font-weight: 600;
+}
+#nav-title, #nav-title a{
+  font-weight: bold;
+  grid-column: 1 / 1;
+  background-color: var(--accent);
+  color: var(--black);
+}
 
 /* Language switch button */
+
 #switch-lang {
-  padding: 20px 40px;
   cursor: pointer;
   border: none;
   background: none;
-  font-size: 2rem;
-  transition: all 0.2s ease-in-out;
+  font-size: 1.2rem;
+  transition: all .5s ease-in-out;
   color: var(--white);
+}
+#menu-toggle,
+.menu-btn {
+  display: none;
 }
 #switch-lang:hover {
   color: var(--accent);
@@ -92,46 +116,9 @@ li{
 #switch-lang:active {
   transform: scale(1.05);
 }
-.menu-item,
-#nav-name {
-  display: block;
-  padding: 12px 24px;
-  color: var(--white);
-  font-family: Roboto, sans-serif;
-  font-size: 20px;
-  font-weight: 200;
-  text-decoration: none;
-}
-.menu-item:hover {
-  color: var(--accent);
-  font-weight: 400;
-}
-#nav-name {
-  font-weight: bold;
-}
-#nav-name p::first-letter {
-  color: var(--accent);
-  font-size: 1.7rem;
-  margin-right: 3px;
-}
-#job-desc {
-  font-size: 1rem;
-  color: #888;
-  text-align: center;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #333;
-}
-#social {
-  display: flex;
-  justify-content: center;
-  list-style-type: none;
-  padding-top: 150%;
-  border-top: 1px solid #333;
-  border-bottom: 1px solid #333;
-}
-
 
 /* ========== HERO ========== */
+
 #hero {
   width: 100%;
   height: 100vh;
@@ -141,17 +128,23 @@ li{
   background-size: 300% 300%;
   background-image: linear-gradient(
     90deg,
-    rgba(0, 191, 128, .3),
-    rgba(191, 54, 0, .3)
+    rgba(0, 191, 128, 0.3),
+    rgba(191, 54, 0, 0.3)
   );
   animation: AnimateBG 7s ease infinite;
   position: fixed;
   z-index: -1;
 }
-@keyframes AnimateBG { 
-  0%{background-position:0% 50%}
-  50%{background-position:100% 50%}
-  100%{background-position:0% 50%}
+@keyframes AnimateBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 #hero-container {
   display: grid;
@@ -177,16 +170,16 @@ li{
   align-self: center;
   justify-self: center;
 }
-.name-l{
+.name-l {
   font-size: 5rem;
   color: var(--accent);
 }
 .name-s {
   font-size: 1.5rem;
 }
-[class="lang-en name-s"]{
+[class="lang-en name-s"] {
   position: relative;
-  top: -.5rem;
+  top: -0.5rem;
 }
 .name1 {
   grid-row: 2;
@@ -197,27 +190,28 @@ li{
   grid-row: 3;
 }
 
-
 /* ========== ABOUT ME ========== */
-
+#about{
+  height: 100vh;
+}
 /* Tools */
-.tools-container{
+.tools-container {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   margin: auto;
 }
-.tools-container img{
-  width: 100px;
-  padding: 2em 2em;
+.tools-container img {
+  width: 50px;
+  padding: 1em;
 }
 
 /* Training */
-.tools-container + h3{
-  margin-top: 2em;
+.tools-container + h3 {
+  margin-top: 1em;
 }
-.training-container{
+.training-container {
   margin: 1em 1em 0 1em;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -225,10 +219,11 @@ li{
   align-items: center;
   text-align: center;
 }
-.training-title{
+.training-title {
   cursor: pointer;
 }
-.training-title, .training-desc{
+.training-title,
+.training-desc {
   padding: 1em 0;
   background-color: var(--white);
   color: var(--black);
@@ -236,16 +231,16 @@ li{
   font-size: 1.5rem;
   border: none;
 }
-.training-title:nth-of-type(even){
+.training-title:nth-of-type(even) {
   box-shadow: inset 0 0 0 4px var(--white);
   background-color: var(--black);
   color: var(--white);
 }
-.training-title:hover{
+.training-title:hover {
   background-color: var(--orange);
   box-shadow: inset 0 0 0 4px var(--orange);
 }
-.training-desc{
+.training-desc {
   grid-column: 1 / 5;
   display: none;
   text-align: left;
@@ -253,19 +248,22 @@ li{
   background-color: var(--orange);
   font-weight: normal;
 }
-.training-desc ul li:not(:last-child){
+.training-desc ul li:not(:last-child) {
   margin-bottom: 0.5em;
   /* border-bottom: 1px solid black; */
 }
-.training-desc ul li:not(:last-child):after{
+.training-desc ul li:not(:last-child):after {
   content: "";
   display: block;
   height: 1px;
-  margin-top: .2em;
+  margin-top: 0.2em;
   margin-right: 1em;
   background: var(--black);
 }
 /* ========== PROJECTS ========== */
+#projects {
+  height: 100vh;
+}
 #projects-container {
   display: flex;
   align-items: center;
@@ -313,16 +311,26 @@ figure:hover .img-hover-text {
   pointer-events: none;
 }
 
-
 /* ========== CONTACT ========== */
-#contact-text {
+#contact {
+  height: 100vh;
+}
+.contact-text {
   color: var(--white);
   text-align: center;
-  margin: 0 30%;
+  margin: 5em 30%;
+  margin-bottom: 2rem;
 }
-#contact-text span{
+.contact-text span {
   font-size: 1.5rem;
   font-weight: 800;
+  margin-bottom: 2rem;
+}
+
+ul.contact-text {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 /* Contact Mail Icon */
@@ -346,3 +354,6 @@ figure:hover .img-hover-text {
 .mail-icon:active #mail-sending {
   display: none;
 }
+
+/* ========== RESPONSIVE ==========
+

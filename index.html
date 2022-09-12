@@ -20,12 +20,16 @@
     <script type="text/javascript" src="./main.js"></script>
   </head>
   <body>
-    <nav>
-      <ul id="menu-box">
-        <li id="nav-name">
-          <p>Lautaro</p>
-          <p>González</p>
-          <p>Trejo</p>
+    <!-- <nav>
+      <input id="menu-toggle" type="checkbox" />
+      <label class="menu-btn" for="menu-toggle">
+        <span></span>
+      </label>
+      <ul class="menu-box">
+        <li>
+          <span class="nav-name">Lautaro</span>
+          <span class="nav-name">González</span>
+          <span class="nav-name">Trejo</span>
         </li>
         <li id="job-desc">
           <p class="lang-es">Desarrollador Web</p>
@@ -72,6 +76,36 @@
             <i class="fa-solid fa-language fa-lg"></i>
           </button>
         </li>
+      </ul>
+    </nav> -->
+    <nav>
+      <ul id="nav-container">
+        <p id="nav-title"><a href="#">Lautaro González Trejo</a></p>
+        <ul id="nav-navigation">
+          <li>
+            <button id="switch-lang">
+              <i class="fa-solid fa-language fa-lg"></i>
+            </button>
+          </li>
+          <li>
+            <a href="#about"
+              ><span class="lang-es">Sobre mí</span
+              ><span class="lang-en">About Me</span></a
+            >
+          </li>
+          <li>
+            <a href="#projects"
+              ><span class="lang-es">Proyectos</span
+              ><span class="lang-en">Projects</span></a
+            >
+          </li>
+          <li>
+            <a href="#contact"
+              ><span class="lang-es">Contacto</span
+              ><span class="lang-en">Contact</span></a
+            >
+          </li>
+        </ul>
       </ul>
     </nav>
     <main>
@@ -141,10 +175,12 @@
               CS50's Intro to CS
             </button>
             <button class="training-title" onclick="openTab('Auto')">
-              Autodidacta
+              <span class="lang-es">Autodidacta</span>
+              <span class="lang-en">Self-taught</span>
             </button>
             <button class="training-title" onclick="openTab('Teacher')">
-              Profesor de Inglés
+              <span class="lang-es">Profesor de Inglés</span>
+              <span class="lang-en">English Teacher</span>
             </button>
             <div id="Python" class="training-desc" onclick="gridTab('Python')">
               <ul>
@@ -158,8 +194,8 @@
                 </li>
                 <li>Codo a Codo 4.0 - Ciudad de Buenos Aires</li>
                 <li>
-                  HTML – CSS – Bootstrap – JS – VUE – GIT – Scrum – MySQL – Python –
-                  CRUD – Django
+                  HTML – CSS – Bootstrap – JS – VUE – GIT – Scrum – MySQL –
+                  Python – CRUD – Django
                 </li>
               </ul>
             </div>
@@ -199,10 +235,12 @@
                 <li>Instituto Superior de Formación Docente Nº21</li>
                 <li>
                   <span class="lang-es">
-                    Inglés avanzado – Creación de planes – Liderazgo – Comunicación
+                    Inglés avanzado – Creación de planes – Liderazgo –
+                    Comunicación
                   </span>
                   <span class="lang-en">
-                    Advanced English – Plan creation – Leadership – Communication
+                    Advanced English – Plan creation – Leadership –
+                    Communication
                   </span>
                 </li>
               </ul>
@@ -299,7 +337,7 @@
           ><span class="lang-en">Let's Get in Touch</span>
         </h2>
         <div id="contact-container">
-          <p id="contact-text">
+          <p class="contact-text">
             <span class="lang-es"
               >Estoy muy entusiasmado por comenzar mi carrera profesional como
               desarrollador. ¡Hagámoslo juntos!</span
@@ -314,8 +352,47 @@
             >
               <i class="fa-solid fa-envelope-open" id="mail-open"></i>
               <i class="fa-solid fa-envelope-open-text" id="mail-sending"></i>
-              <i class="fa-solid fa-envelope" id="mail-closed"></i> </a
-            ><br /><br />
+              <i class="fa-solid fa-envelope" id="mail-closed"></i>
+            </a>
+          </p>
+          <p class="contact-text">
+            <span class="lang-es"
+              >¡Aprende más de mí en los siguientes enlaces!</span
+            ><span class="lang-en"
+              >You can also find me on these sites!</span
+            >
+            <ul class="contact-text">
+              <li>
+                <a
+                  href="https://linkedin.com/in/LautaroGTrejo"
+                  class="mail-icon"
+                  target="_blank"
+                  ><i class="fa-brands fa-linkedin"></i
+                ></a>
+              </li>
+              <li class="lang-es">
+                <a
+                  href="./src/GONZALEZ-TREJO-LAUTARO-CV-2022.pdf"
+                  class="mail-icon"
+                  target="_blank"
+                  ><i class="fa-solid fa-file"></i></a>
+              </li>
+              <li class="lang-en">
+                <a
+                  href="./src/GONZALEZ-TREJO-LAUTARO-RESUME-2022.pdf"
+                  class="mail-icon"
+                  target="_blank"
+                  ><i class="fa-solid fa-file"></i></a>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/Levtraru"
+                  class="mail-icon"
+                  target="_blank"
+                  ><i class="fa-brands fa-github"></i
+                ></a>
+              </li>
+            </ul>
           </p>
         </div>
       </section>
