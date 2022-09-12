@@ -39,16 +39,6 @@ h2 {
   padding-top: 2rem;
   margin: 0 0 0.5em 0;
 }
-h3 {
-  color: var(--black);
-  font-weight: 800;
-  font-size: 1.5em;
-  background-color: var(--orange);
-  margin: 0 auto;
-  padding: 0.5em 0;
-  text-align: center;
-  width: 20%;
-}
 .empty {
   height: 667px;
 }
@@ -72,8 +62,9 @@ li {
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
   z-index: 2;
 }
-#nav-navigation, #nav-title {
-  padding: 0 .5em;
+#nav-navigation,
+#nav-title {
+  padding: 0 0.5em;
   display: inline-flex;
   justify-content: space-around;
   align-items: center;
@@ -81,15 +72,16 @@ li {
 #nav-navigation {
   grid-column: 3 / 3;
 }
-#nav-navigation li a{
-  transition: all .5s ease-in-out;
+#nav-navigation li a {
+  transition: all 0.5s ease-in-out;
 }
 
 #nav-navigation li a:hover {
   color: var(--accent);
   font-weight: 600;
 }
-#nav-title, #nav-title a{
+#nav-title,
+#nav-title a {
   font-weight: bold;
   grid-column: 1 / 1;
   background-color: var(--accent);
@@ -103,7 +95,7 @@ li {
   border: none;
   background: none;
   font-size: 1.2rem;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   color: var(--white);
 }
 #menu-toggle,
@@ -191,8 +183,18 @@ li {
 }
 
 /* ========== ABOUT ME ========== */
-#about{
+#about {
   height: 100vh;
+}
+h3 {
+  color: var(--black);
+  font-weight: 800;
+  font-size: 1.5em;
+  background-color: var(--orange);
+  margin: 0 auto;
+  padding: 0.5em 0;
+  text-align: center;
+  width: 20%;
 }
 /* Tools */
 .tools-container {
@@ -250,7 +252,6 @@ li {
 }
 .training-desc ul li:not(:last-child) {
   margin-bottom: 0.5em;
-  /* border-bottom: 1px solid black; */
 }
 .training-desc ul li:not(:last-child):after {
   content: "";
@@ -357,11 +358,22 @@ ul.contact-text {
 
 /* ========== RESPONSIVE ========== */
 
-@media only screen and (max-width: 420px){
+@media only screen and (max-width: 420px) {
+  html {
+    overflow: visible;
+  }
+  h2 {
+    letter-spacing: 0.2rem;
+    padding-top: 0;
+    font-size: 2em;
+  }
+  /* NAVBAR */
   #nav-container {
-    font-size: .75rem;
+    font-size: 0.7rem;
     grid-template-columns: 1fr 0fr 2fr;
   }
+
+  /* HERO */
   #hero {
     width: 100vw;
   }
@@ -375,13 +387,13 @@ ul.contact-text {
     grid-row: 1;
   }
   .name {
-    font-size: 1rem;
+    font-size: 2rem;
   }
   .name-l {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
   }
   .name-s {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
   .name-name {
     grid-column: 1;
@@ -391,6 +403,35 @@ ul.contact-text {
     grid-column: 1;
     grid-row: 3;
   }
+
+  /* ABOUT ME */
+  h3 {
+    font-size: 1.2em;
+    width: 50%;
+  }
+  .training-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+  }
+  .training-title,
+  .training-desc {
+    padding: .5em 0;
+  }
+  .training-desc {
+    grid-column: 1 / 1;
+    font-size: 1.3em;
+  }
+
+  /* PROJECTS */
+  #projects {
+    height: auto;
+  }
+  #projects-container {
+    flex-direction: column;
+  }
+
+  /* CONTACT */
+  .contact-text {
+    margin: 3em 0;
+  }
 }
-
-
