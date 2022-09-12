@@ -355,5 +355,42 @@ ul.contact-text {
   display: none;
 }
 
-/* ========== RESPONSIVE ==========
+/* ========== RESPONSIVE ========== */
+
+@media only screen and (max-width: 420px){
+  #nav-container {
+    font-size: .75rem;
+    grid-template-columns: 1fr 0fr 2fr;
+  }
+  #hero {
+    width: 100vw;
+  }
+  #hero-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr repeat(4, 1fr);
+  }
+  #profile-pic {
+    height: 200px;
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .name {
+    font-size: 1rem;
+  }
+  .name-l {
+    font-size: 1.5rem;
+  }
+  .name-s {
+    font-size: 1.2rem;
+  }
+  .name-name {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .name-title {
+    grid-column: 1;
+    grid-row: 3;
+  }
+}
+
 
