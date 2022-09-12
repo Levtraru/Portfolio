@@ -1,7 +1,4 @@
 window.addEventListener("load", () => {
-
-
-  
   // Language change function
   $(".lang-en").hide();
   $("#switch-lang").click(function () {
@@ -19,3 +16,7 @@ function openTab(tabName){
   }
   document.getElementById(tabName).style.display = "block";
 }
+
+// Get viewheight
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);

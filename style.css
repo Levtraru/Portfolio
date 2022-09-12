@@ -40,7 +40,7 @@ h2 {
   margin: 0 0 0.5em 0;
 }
 .empty {
-  height: 667px;
+  height: 100vh;
 }
 .h2-margin {
   height: 2em;
@@ -112,7 +112,7 @@ li {
 /* ========== HERO ========== */
 
 #hero {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -153,12 +153,14 @@ li {
   justify-self: center;
 }
 .name {
+  position: relative;
+  top: 2em;
   color: var(--white);
   font-size: 3rem;
   font-weight: 800;
   letter-spacing: 0.5rem;
-  text-align: center;
   line-height: 1.5rem;
+  text-align: center;
   align-self: center;
   justify-self: center;
 }
@@ -269,6 +271,7 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 6em;
 }
 .project-link {
   margin: 20px;
@@ -359,12 +362,8 @@ ul.contact-text {
 /* ========== RESPONSIVE ========== */
 
 @media only screen and (max-width: 420px) {
-  html {
-    overflow: visible;
-  }
   h2 {
     letter-spacing: 0.2rem;
-    padding-top: 0;
     font-size: 2em;
   }
   /* NAVBAR */
@@ -374,9 +373,6 @@ ul.contact-text {
   }
 
   /* HERO */
-  #hero {
-    width: 100vw;
-  }
   #hero-container {
     grid-template-columns: 1fr;
     grid-template-rows: 3fr repeat(4, 1fr);
@@ -388,6 +384,7 @@ ul.contact-text {
   }
   .name {
     font-size: 2rem;
+    top: 0;
   }
   .name-l {
     font-size: 2.5rem;
@@ -413,9 +410,14 @@ ul.contact-text {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, 1fr);
   }
+  .tools-container img {
+    width: 50px;
+    padding: 1em 0;
+  }
   .training-title,
   .training-desc {
     padding: .5em 0;
+    font-size: 1.2em;
   }
   .training-desc {
     grid-column: 1 / 1;
@@ -423,11 +425,16 @@ ul.contact-text {
   }
 
   /* PROJECTS */
-  #projects {
-    height: auto;
-  }
   #projects-container {
     flex-direction: column;
+    margin-top: 0;
+  }
+  figure {
+    text-align: center;
+  }
+  .project-img {
+    height: 150px;
+    width: 150px;
   }
 
   /* CONTACT */
