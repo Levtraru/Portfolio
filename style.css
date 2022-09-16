@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 :root {
   --accent: #00bf80;
-  --orange: #bf5c00;
+  --orange: #e77c4b;
   --white: #ccc;
   --black: #181818;
 }
@@ -201,6 +201,7 @@ li {
   padding: 0.5em 0;
   text-align: center;
   width: 20%;
+  border-radius: .5em;
 }
 /* Tools */
 .tools-container {
@@ -243,6 +244,12 @@ li {
   box-shadow: inset 0 0 0 4px var(--white);
   background-color: var(--black);
   color: var(--white);
+}
+.training-title:nth-of-type(1) {
+  border-radius: .5em 0 0 0;
+}
+.training-title:nth-of-type(4) {
+  border-radius: 0 .5em 0 0;
 }
 .training-title:hover {
   background-color: var(--orange);
